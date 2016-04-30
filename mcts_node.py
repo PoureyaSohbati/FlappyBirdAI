@@ -26,7 +26,7 @@ class MCTSNode:
         """
         
         return ' '.join(["[", str(self.parent_action), "Wins:", str(self.wins),
-                         "Win rate:", "{0:.0f}%".format(100 * self.wins / self.visits),
+                         "Win rate:", "{:.0%}".format(self.wins / self.visits),
                          "Visits:", str(self.visits),  "]\n"])
         """
         #return ' '.join([str(self.parent_action), "{0:.0f}".format(self.wins/self.visits + 2*sqrt(2*log(self.parent.visits)/self.visits))])
